@@ -17,17 +17,18 @@ func CLI_Calc() string {
 	var result float64 = 0
 
 	for result == 0 {
-		fmt.Println("Choose what operation you would like to perform: \n 1 -> Add \n 2 -> Subtract \n 3 -> Multiply \n 4 -> Divide")
+		fmt.Println("Choose what operation you would like to perform:" +
+			"\n + -> Add \n - -> Subtract \n * -> Multiply \n / -> Divide")
 		fmt.Scanln(&operation)
 
 		switch operation {
-		case "1":
+		case "+":
 			result = num_1 + num_2
-		case "2":
+		case "-":
 			result = num_1 - num_2
-		case "3":
+		case "*":
 			result = num_1 * num_2
-		case "4":
+		case "/":
 			result = num_1 / num_2
 		default:
 			fmt.Println("--- Wrong input. Try again or click ctrl+c to exit ---")
